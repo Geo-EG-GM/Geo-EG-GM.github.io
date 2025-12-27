@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE D'ACCUEIL -->
+<div id="accueil">
+    <h1>Escape Game</h1>
+    <p>Si vous avez trouvé la solution et validé que c'est celle-ci, sans trouver le mot clef nécessaire, vous pouvez utiliser le passe-partout "IMALLCHEAT" pour passer l'étape. Prévenez-moi de la correction à ajouter. Aidez-vous de l'historique d'erreur pour retrouver où le couac à commencé et "RESET" la partie, en faisant le nombre d'erreur (-30sec) nécessaire pour revenir au temps voulu</p>
+    <div>
+    <h3>Contes Cruels</h3>
+    <button onclick="lancerScenario(1)">Easy : Dans la forêt de l'Ogre</button>
+    <button onclick="lancerScenario(2)">Intermediaire : Le Miroir Maléfique</button>
+    <button onclick="lancerScenario(3)">Hardcore : La Machination de Barbe-Bleue</button>
+    </div>
+    <div>
+    <h3>Les Mystères de l'Art</h3>
+    <button onclick="lancerScenario(4)">Easy : L'Enigme Van Gogh</button>
+    <button onclick="lancerScenario(5)">Intermediaire : Le Code Secret de Michel-Ange</button>
+    <button onclick="lancerScenario(6)">Hardcore : Le tableau volé de Gustav Klimt</button>
+    </div>
+</div>
+
+<!-- ÉCRAN DE JEU -->
+<div id="jeu" style="display:none;">
+    <div id="header" style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+            <button id="homeBtn" onclick="resetHome()">RESET</button>
+            <h2 id="titreScenario"></h2>
+        </div>
+
+        <div style="text-align:right;">
+            <div id="timer">45:00</div>
+            <div id="penalitesTotales" class="indice"></div>
+        </div>
+    </div>
+
+        <div id="mainArea" style="display:flex; gap:20px; align-items:flex-start;">
+            <div id="leftColumn" style="flex:1;">
+                <div id="contenuScenario"></div>
+            </div>
+
+            <aside id="historique" style="width:320px; border-left:1px solid #ddd; padding-left:12px;">
+                <h3>Historique d'erreurs & réussites</h3>
+                <div id="historyList" style="max-height:60vh; overflow:auto; font-size:14px;"></div>
+<!--                 <div style="margin-top:8px;">
+                    <button onclick="clearHistory()">Effacer l'historique</button>
+                </div> -->
+            </aside>
+        </div>
+</div>
+
+<!-- Scénarios séparés -->
+<script src="scenarios.js"></script>
+<!-- Script principal du jeu -->
+<script src="game.js"></script>
+</body>
+</html>

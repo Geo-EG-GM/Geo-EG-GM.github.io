@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5555;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contenuScenario {
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indice {
+    margin-top: 10px;
+    font-style: italic;
+    color: #ccc;
+}
